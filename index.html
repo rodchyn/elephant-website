@@ -11,6 +11,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href="stylesheets/prism.css" rel="stylesheet" />
   </head>
   <body>
     <div class="wrapper">
@@ -29,16 +30,32 @@
       </header>
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="goal" class="anchor" href="#goal"><span class="octicon octicon-link"></span></a>Project Goal.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>This is CoffeScript inspired sugar syntax project for PHP programming language.
+Author of this syntax addidion is Yura Rodchyn PHP developer from Ukraine.
+The motivation was the hatred of the "$, -> and ;" and main goal of project is next sugar syntax:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<pre class="line-highlight" data-line="1,3-8"><code class="language-php">$a = 'b';
+
+class Echo {
+    private $var;
+    public function __construct($var)
+    {
+        $this->var = $var;
+    }
+}</code></pre>
+<p>converted from:</p>
+<pre class="line-highlight" data-line="1,3,4"><code class="language-coffeescript">a = 'b'
+
+class Echo
+    construct -> (@var)</code></pre>
+
+<p>Also with few missed functional addition like:</p>
+
+<pre><code class="language-coffeescript">a = 'bcdef'.length</code></pre>
+<pre><code class="language-php">$a = bm_strlen('bcdef');
 </code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
 <h3>
 <a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
@@ -76,6 +93,6 @@ $ git checkout gh-pages
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
+    <script src="javascripts/prism.js"></script>
   </body>
 </html>
