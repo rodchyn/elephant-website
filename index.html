@@ -62,10 +62,34 @@ class Echo
 <p>Also with few missed functional addition like:</p>
 
 <pre><code class="language-coffeescript">a = 'bcdef'.length</code></pre>
-<pre><code class="language-php">$a = bm_strlen('bcdef');
-</code></pre>
+<pre><code class="language-php">$a = bm_strlen('bcdef');</code></pre>
 
+<p>String printing</p>
+<pre><code class="language-coffeescript">a = 'name: ? and age = %d' userName, userAge</code></pre>
+<pre><code class="language-php">$a = sprintf('name: %s and age = %d', $userName, $userAge);</code></pre>
 
+<p>Arrays</p>
+<pre><code class="language-coffeescript">nameArray = ['fname', 'lname']
+b = nameArray.size
+[firstName, lastName] = nameArray</code></pre>
+<pre><code class="language-php">$nameArray = array('fname', 'lname');
+$b = count($nameArray);
+$firstName = $nameArray[0]; // fname
+$lastName = $nameArray[1]; // lname</code></pre>
+
+          <p>IF</p>
+          <pre><code class="language-coffeescript">a ?= setThisVarIfBlank
+b = c if d
+b = c unless d</code></pre>
+          <pre><code class="language-php">if(empty($a)) {
+    $a = $setThisVarIfBlank;
+}
+if($d) {
+    $b = $c;
+}
+if(!$d) {
+    $b = $c;
+}</code></pre>
       </section>
       <footer>
         <p style="margin-bottom: 0;">This project is maintained by <a href="https://github.com/rodchyn">rodchyn</a> to help us maintenance this syntax please donate:</p>
