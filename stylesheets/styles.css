@@ -227,8 +227,12 @@ footer {
     padding:0;
   }
   
-  header ul, header p.view {
+  header ul, header p.view, header p.links {
     position:static;
+  }
+
+  header p.links a {
+    display: block;
   }
   
   pre, code {
